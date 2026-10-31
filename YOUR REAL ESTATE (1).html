@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YOUR REAL ESTATE</title>
+<meta name="description" content="Buy, rent, or sell with a trusted local real-estate team.">
+<style>
+:root{--navy:#0f2742;--gold:#c8963e;--bg:#f7f6f2;--card:#fff;--tx:#1f2933;--mu:#64707d;--bd:#e5e2da;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1520;--card:#152233;--tx:#e8edf2;--mu:#9aa7b4;--bd:#243448;--navy:#09182b}}
+:root[data-theme="dark"]{--bg:#0d1520;--card:#152233;--tx:#e8edf2;--mu:#9aa7b4;--bd:#243448;--navy:#09182b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .5rem}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:auto;padding:2.5rem 1rem}.mu{color:var(--mu)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy);color:#fff}
+.hd{max-width:1180px;margin:auto;display:flex;align-items:center;gap:1rem;padding:.7rem 1rem}
+.lg{display:flex;align-items:center;gap:.6rem;font:700 1.05rem Georgia,serif;margin-right:auto}
+.lg i{background:var(--gold);color:var(--navy);width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font-style:normal}.lg img{height:34px}
+nav{display:flex;gap:1.1rem;align-items:center}nav a.l{opacity:.85;font-size:.95rem}nav a.l:hover,nav a.act{opacity:1;color:var(--gold)}
+.mb{display:none;background:none;border:1px solid #ffffff55;color:#fff;border-radius:8px;padding:.4rem .7rem;font-size:1.1rem}
+@media(max-width:960px){.mb{display:block}nav{position:absolute;left:0;right:0;top:100%;background:var(--navy);flex-direction:column;align-items:stretch;gap:.3rem;max-height:0;overflow:hidden;opacity:0;transition:.25s}nav.open{max-height:520px;opacity:1;padding:1rem}nav a.l{padding:.5rem 0}}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.6rem 1.1rem;border-radius:10px;border:1px solid transparent;font:600 .95rem system-ui,sans-serif;cursor:pointer;transition:.2s;min-height:44px;text-align:center}
+.bg{background:var(--gold);color:#1a1a1a}.bn{background:var(--navy);color:#fff;border-color:#ffffff22}.bw{background:#1f8a4c;color:#fff}.bo{background:transparent;border-color:var(--bd);color:var(--tx)}
+.b:hover{transform:translateY(-1px);filter:brightness(1.08)}.b:disabled{opacity:.6}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:radial-gradient(circle at 85% 15%,#c8963e40,transparent 45%),linear-gradient(135deg,#091a2e,#16385f);color:#fff;padding:4rem 1rem 4.5rem}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.6rem);max-width:15ch}.hero p{font-size:1.15rem;opacity:.85;max-width:46ch}
+.sf{background:var(--card);color:var(--tx);border-radius:16px;padding:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;box-shadow:0 20px 50px #0005;margin-top:2rem}
+select,input,textarea{width:100%;padding:.6rem .75rem;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;min-height:44px}
+label{font-size:.85rem;font-weight:600;display:block;margin-bottom:.25rem}
+.gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem}
+.cd{position:relative;background:var(--card);border:1px solid var(--bd);border-radius:16px;overflow:hidden;box-shadow:0 2px 10px #0000000d;transition:.25s}.cd:hover{transform:translateY(-4px);box-shadow:0 14px 30px #0002}
+.im{display:block;position:relative;aspect-ratio:10/7;overflow:hidden;background:var(--bd)}.im img{width:100%;height:100%;object-fit:cover;transition:.5s}.cd:hover .im img{transform:scale(1.06)}
+.tg{position:absolute;top:.7rem;left:.7rem;font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:99px;color:#fff;background:var(--navy)}.tg.rent{background:#1f8a4c}.tg.ft{left:auto;right:3.6rem;background:var(--gold);color:#1a1a1a}
+.hb{position:absolute;top:.5rem;right:.6rem;width:40px;height:40px;border-radius:50%;border:0;background:#fffffff0;color:#999;font-size:1.2rem;cursor:pointer}.hb.on{color:#e0245e}
+.cb{padding:1rem}.pr{font:700 1.25rem Georgia,serif;color:var(--gold);margin:.2rem 0}
+.sp{display:flex;gap:1rem;flex-wrap:wrap;font-size:.88rem;color:var(--mu);margin:.4rem 0}.cb p{margin:.3rem 0}
+.ac{display:flex;gap:.5rem;margin-top:.8rem}.ac .b{flex:1;padding:.5rem}
+.cmp{display:flex;gap:.4rem;align-items:center;font-weight:400;margin:.7rem 0 0}.cmp input{width:auto;min-height:0}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}.bx{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:1.2rem}.bx big{font-size:1.8rem}
+.sec{margin-top:3rem}.sec>h2{font-size:1.8rem}.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.fl{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:1rem;margin:1.2rem 0}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;font-weight:600}
+.cta{background:var(--navy);color:#fff;border-radius:18px;padding:2rem;display:flex;gap:1rem;justify-content:space-between;align-items:center;flex-wrap:wrap}.cta h2{margin:0}
+.gm{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/9;cursor:zoom-in;background:var(--bd)}.gm img{width:100%;height:100%;object-fit:cover}
+.nv{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:#fffffff0;color:#111;font-size:1.4rem;cursor:pointer}.pv{left:.6rem}.nx{right:.6rem}
+.ct{position:absolute;bottom:.7rem;right:.7rem;background:#000a;color:#fff;font-size:.8rem;padding:.2rem .6rem;border-radius:99px}
+.gt{display:flex;gap:.5rem;overflow-x:auto;margin-top:.6rem}.gt button{border:2px solid transparent;padding:0;border-radius:10px;overflow:hidden;width:110px;flex:none;cursor:pointer;background:none}.gt .on{border-color:var(--gold)}
+.dl{display:grid;grid-template-columns:1fr 340px;gap:2rem;margin-top:1.5rem}@media(max-width:900px){.dl{grid-template-columns:1fr}}
+.spc{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem}.spc div{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:.6rem .8rem}.spc small{display:block;color:var(--mu)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}.chips span{background:var(--card);border:1px solid var(--bd);border-radius:99px;padding:.25rem .8rem;font-size:.9rem}
+.map{display:grid;place-items:center;min-height:220px;border:2px dashed var(--bd);border-radius:14px;color:var(--mu);text-align:center;padding:1rem}iframe.map{border:0;width:100%;height:300px;padding:0}
+.fd{margin-bottom:.8rem}.er{color:#c0392b;font-size:.82rem;display:block;min-height:0}[aria-invalid="true"]{border-color:#c0392b}
+.ms{margin-top:.8rem;font-weight:600}.ms.ok{color:#1f8a4c}.ms.bad{color:#c0392b}
+.em{text-align:center;padding:3rem 1rem;background:var(--card);border:1px dashed var(--bd);border-radius:16px}
+table{width:100%;border-collapse:collapse;background:var(--card)}td,th{border:1px solid var(--bd);padding:.6rem;text-align:left;vertical-align:top}
+.ov{overflow-x:auto}
+.fw{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:.6rem;z-index:40}.fw a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;box-shadow:0 6px 18px #0005;color:#fff}
+#cb{position:fixed;left:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:40;display:none}
+.lb{position:fixed;inset:0;background:#000e;z-index:100;display:none;place-items:center}.lb.on{display:grid}.lb img{max-width:92vw;max-height:80vh;border-radius:8px}.lb .nv{position:fixed}.lb .x{position:fixed;top:1rem;right:1rem;color:#fff;background:none;border:0;font-size:2rem;cursor:pointer}
+#ts{position:fixed;left:50%;transform:translateX(-50%);bottom:5rem;background:var(--navy);color:#fff;padding:.6rem 1rem;border-radius:10px;z-index:120;display:none}
+footer{background:var(--navy);color:#cfd8e3;margin-top:4rem}footer .g3{padding:3rem 1rem 1rem;max-width:1180px;margin:auto}footer h3{color:#fff;font-size:1.05rem}footer a{display:block;padding:.15rem 0;opacity:.85}footer a:hover{color:var(--gold)}.cp{text-align:center;padding:1rem;border-top:1px solid #ffffff22;font-size:.85rem}
+.dm{font-size:.8rem;color:var(--mu);font-style:italic}
+@media print{header,footer,.fw,#cb,.ac,form{display:none!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head>
+<body>
+<header><div class="hd" id="hd"></div></header>
+<main id="app"></main>
+<footer id="ft"></footer>
+<div class="fw" id="fw"></div><a id="cb" class="b bg" href="#/compare"></a>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><button class="x" data-a="lbx" aria-label="Close">✕</button><button class="nv pv" data-a="gn" data-d="-1" aria-label="Previous image">‹</button><img id="lbi" alt=""><button class="nv nx" data-a="gn" data-d="1" aria-label="Next image">›</button><span class="ct" id="lbc"></span></div>
+<div id="ts" role="status"></div>
+<script>
+/* ============ EDIT HERE: company details (change once, updates everywhere) ============ */
+const C={name:"YOUR REAL ESTATE",logo:"",tagline:"Find a Place You'll Love to Call Home.",town:"YOUR TOWN, YOUR CITY, PAKISTAN",
+phone:"+92 XXX XXXXXXX",wa:"92XXXXXXXXXX",email:"info@yourrealestate.com",addr:"Your Complete Office Address",hours:"Monday - Saturday: 9:00 AM - 8:00 PM",
+mapUrl:"" /* paste YOUR_GOOGLE_MAPS_EMBED_URL */,social:{Facebook:"#",Instagram:"#",YouTube:"#"}};
+const NAV=[["Home","/"],["Properties","/properties"],["Buy","/buy"],["Rent","/rent"],["Sell","/sell"],["About Us","/about"],["Contact","/contact"]];
+/* ============ EDIT HERE: services & demo testimonials ============ */
+const SV=[["🏠","Property Buying","Find the right house, plot or flat with local guidance."],["💼","Property Selling","List your property and reach genuine buyers."],["🔑","Property Renting","Homes, shops and offices available for rent."],["🧰","Property Management","Help with tenants, upkeep and rent collection."],["📈","Investment Consultation","Talk through options before you invest."],["🏬","Commercial Property","Shops, offices and plazas."],["🏡","Residential Property","Houses and apartments for families."],["📐","Plots Buying & Selling","Residential and commercial plots."],["🧾","Property Valuation","Get a realistic market estimate."],["📝","Property Listing","We prepare and promote your listing."]];
+const TS=[["Customer name","Demo testimonial — replace with a verified customer review."],["Customer name","Demo testimonial — replace with a verified customer review."],["Customer name","Demo testimonial — replace with a verified customer review."]];
+/* ============ EDIT HERE: properties. Replace imgs with your own photo URLs ============ */
+const E={House:"🏠",Apartment:"🏢",Plot:"📐",Commercial:"🏙️",Shop:"🏬",Office:"💼","Farm House":"🌳",Land:"🌾"},TY=Object.keys(E);
+const AM=["Gas","Electricity","Water Supply","Security","Parking","Garden","Backup Power","Gated Community","Broadband","Near Mosque"];
+// title, purpose, type, price(PKR), location, city, area, unit, beds, baths, parking, featured
+const D=[["Modern Family House","sale","House",45000000,"DHA Phase 6","Lahore",10,"Marla",5,6,2,1],["Luxury Apartment","sale","Apartment",18500000,"Gulberg III","Lahore",1650,"Sq Ft",3,3,1,1],["Corner Residential Plot","sale","Plot",12000000,"Bahria Town","Rawalpindi",1,"Kanal",0,0,0,1],["Shop on Main Boulevard","sale","Shop",25000000,"Main Boulevard","Faisalabad",450,"Sq Ft",0,1,0,0],["Executive Office Floor","sale","Office",32000000,"Blue Area","Islamabad",2200,"Sq Ft",0,3,4,0],["Farm House with Orchard","sale","Farm House",85000000,"Bedian Road","Lahore",4,"Kanal",4,5,6,1],["Agricultural Land","sale","Land",9000000,"Town Outskirts","Your Town",10,"Acre",0,0,0,0],["Commercial Building","sale","Commercial",120000000,"Ring Road","Multan",8,"Marla",0,6,10,0],["Family House 7 Marla","sale","House",21000000,"Citi Housing","Gujranwala",7,"Marla",4,4,1,0],["Furnished Apartment","rent","Apartment",85000,"F-11","Islamabad",1100,"Sq Ft",2,2,1,1],["Upper Portion for Rent","rent","House",65000,"Johar Town","Lahore",5,"Marla",3,3,1,0],["Shop for Rent","rent","Shop",120000,"Cantt Market","Multan",600,"Sq Ft",0,1,0,0],["Office Space for Rent","rent","Office",150000,"Gulberg","Lahore",1800,"Sq Ft",0,2,3,1],["Kanal House for Rent","rent","House",180000,"Model Town","Faisalabad",1,"Kanal",5,5,3,0]];
+const img=(ty,i,k)=>{const h=(i*47+k*18)%360,L=ty=="House"||ty=="Apartment"||ty=="Farm House"?["Exterior","Living area","Bedroom","Kitchen"][k]:["Front view","Interior","Surroundings","Layout"][k];
+return"data:image/svg+xml,"+encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 560'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='hsl(${h},40%,28%)'/><stop offset='1' stop-color='hsl(${h+30},45%,52%)'/></linearGradient></defs><rect width='800' height='560' fill='url(#g)'/><text x='400' y='300' font-size='150' text-anchor='middle'>${E[ty]}</text><text x='400' y='430' font-size='34' fill='white' text-anchor='middle' font-family='sans-serif'>${L}</text></svg>`)};
+const P=D.map((d,i)=>{const[t,p,ty,pr,l,c,a,u,b,ba,pk,f]=d;return{i,id:"RE-"+(1001+i),slug:(t+" "+l+" "+c).toLowerCase().replace(/[^a-z0-9]+/g,"-"),title:t,purpose:p,type:ty,price:pr,loc:l,city:c,area:a,unit:u,beds:b,baths:ba,park:pk,year:2015+i%9,feat:!!f,date:new Date(2026,8,28-i*3),
+short:`${ty} in ${l}, ${c}. ${a} ${u}${b?`, ${b} bedrooms`:""}.`,desc:`This ${ty.toLowerCase()} in ${l}, ${c} is offered ${p=="rent"?"for rent":"for sale"} through ${C.name}. Contact us for full details, documents and a viewing. (Demo description — replace with the real one.)`,
+amen:AM.filter((_,k)=>(k+i)%3!=0),imgs:[0,1,2,3].map(k=>img(ty,i,k))}});
+/* ============ App code ============ */
+const $=s=>document.querySelector(s),cities=[...new Set(P.map(p=>p.city))].sort();
+let favs=[],cmp=[],shown=6,gi=0,cur=null,L=[],lastP="";try{favs=JSON.parse(localStorage.getItem("fav")||"[]")}catch(e){}
+const sv=()=>{try{localStorage.setItem("fav",JSON.stringify(favs))}catch(e){}};
+const tel=()=>"tel:"+C.phone.replace(/[^+\d]/g,""),wa=m=>`https://wa.me/${C.wa}${m?"?text="+encodeURIComponent(m):""}`;
+const fmt=p=>p.purpose=="rent"?`PKR ${p.price.toLocaleString("en-US")} / month`:p.price>=1e7?`PKR ${+(p.price/1e7).toFixed(2)} Crore`:p.price>=1e5?`PKR ${+(p.price/1e5).toFixed(2)} Lakh`:`PKR ${p.price.toLocaleString("en-US")}`;
+const toast=m=>{const t=$("#ts");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",2200)};
+const opt=(a,v)=>a.map(x=>`<option${x==v?" selected":""}>${x}</option>`).join("");
+const sel=(n,l,a,v)=>`<select name="${n}" aria-label="${l}"><option value="">${l}</option>${opt(a,v)}</select>`;
+const beds=v=>`<select name="beds" aria-label="Bedrooms"><option value="">Bedrooms: Any</option>${[1,2,3,4,5].map(n=>`<option value="${n}"${v==n?" selected":""}>${n}+</option>`).join("")}</select>`;
+const card=p=>`<article class="cd"><a class="im" href="#/properties/${p.slug}"><img loading="lazy" width="800" height="560" src="${p.imgs[0]}" alt="${p.title}, ${p.loc}, ${p.city}"><span class="tg ${p.purpose}">${p.purpose=="rent"?"FOR RENT":"FOR SALE"}</span>${p.feat?'<span class="tg ft">Featured</span>':""}</a>
+<button class="hb${favs.includes(p.id)?" on":""}" data-a="fav" data-id="${p.id}" aria-label="Save to favorites">♥</button>
+<div class="cb"><h3>${p.title}</h3><p class="mu">📍 ${p.loc}, ${p.city}</p><div class="pr">${fmt(p)}</div>
+<div class="sp"><span>${p.type}</span>${p.beds?`<span>🛏 ${p.beds} Beds</span><span>🛁 ${p.baths} Baths</span>`:""}<span>📏 ${p.area} ${p.unit}</span>${p.park?`<span>🚗 ${p.park}</span>`:""}</div>
+<p class="mu">${p.short}</p><div class="ac"><a class="b bn" href="#/properties/${p.slug}">View Details</a><a class="b bw" target="_blank" rel="noopener" href="${wa(`Hello, I am interested in Property ID ${p.id} - ${p.title}. Please share more details.`)}">WhatsApp</a></div>
+<label class="cmp"><input type="checkbox" data-a="cmp" data-id="${p.id}"${cmp.includes(p.id)?" checked":""}> Compare</label></div></article>`;
+const grid=a=>a.length?`<div class="gr">${a.map(card).join("")}</div>`:`<div class="em"><h3>No properties found</h3><p class="mu">No properties match your current filters. Try adjusting your search.</p></div>`;
+/* forms */
+const fld=(n,l,t="text",req=1,o=[])=>`<div class="fd"><label for="${n}">${l}${req?" *":""}</label>${t=="select"?`<select id="${n}" name="${n}" ${req?"data-req":""}><option value="">Select</option>${o.map(x=>`<option>${x}</option>`).join("")}</select>`:t=="textarea"?`<textarea id="${n}" name="${n}" rows="4" ${req?"data-req":""}></textarea>`:`<input id="${n}" name="${n}" type="${t}" ${req?"data-req":""} ${t=="file"?"multiple accept=image/*":""}>`}<span class="er"></span></div>`;
+const MSG={viewing:"Thank you! Your viewing request has been received. Our property consultant will contact you shortly.",inquiry:"Thank you! Your message has been received. We will get back to you shortly.",sell:"Thank you! Your property has been submitted. Our team will review it and contact you."};
+const form=(k,f,btn,ctx="")=>`<form class="fm" data-k="${k}" data-ctx="${ctx}" novalidate>${f}<button class="b bg" type="submit" data-t="${btn}">${btn}</button><div class="ms" role="status" aria-live="polite"></div></form>`;
+async function send(k,d){/* BACKEND HOOK: replace with fetch("/api/"+k,{method:"POST",body:JSON.stringify(d)}) or a Supabase insert */
+await new Promise(r=>setTimeout(r,800));try{const s="inq_"+k,a=JSON.parse(localStorage.getItem(s)||"[]");a.push({...d,at:Date.now()});localStorage.setItem(s,JSON.stringify(a))}catch(e){}}
+/* pages */
+const svc=a=>`<div class="g3">${a.map(s=>`<div class="bx"><big>${s[0]}</big><h3>${s[1]}</h3><p class="mu">${s[2]}</p><a class="b bo" href="#/contact">Request Information</a></div>`).join("")}</div>`;
+const WHY=[["✅","Clear Listings","Prices, sizes and details shown up front."],["📍","Local Market Knowledge","We work in the areas we list."],["🔍","Transparent Process","Ask us anything, at any step."],["⚡","Fast Response","Call or WhatsApp us for quick answers."],["🤝","Personalized Assistance","Guidance matched to your budget and needs."],["💬","Easy WhatsApp Communication","Message us in one tap."]];
+function home(){return`<section class="hero"><div class="wrap" style="padding:0 0 0"><h1>Find Your Perfect Property</h1><p>Buy, rent, or sell with a trusted local real-estate team.</p>
+<form class="sf"><select name="purpose" aria-label="Looking for"><option value="buy">Buy</option><option value="rent">Rent</option></select>${sel("type","Property type",TY)}${sel("city","Location",cities)}${beds()}<input name="min" type="number" min="0" placeholder="Min price (PKR)" aria-label="Min price"><input name="max" type="number" min="0" placeholder="Max price (PKR)" aria-label="Max price"><button class="b bg" type="submit">Search</button></form></div></section>
+<div class="wrap"><div class="row" style="justify-content:space-between"><h2>Featured Properties</h2><a class="b bo" href="#/properties">View all properties</a></div>${grid(P.filter(p=>p.feat).slice(0,6))}
+<div class="sec"><h2>Why choose us</h2><div class="g3">${WHY.map(w=>`<div class="bx"><big>${w[0]}</big><h3>${w[1]}</h3><p class="mu">${w[2]}</p></div>`).join("")}</div></div>
+<div class="sec"><h2>Our services</h2>${svc(SV.slice(0,6))}<p><a class="b bo" href="#/services">All services</a></p></div>
+<div class="sec"><h2>What customers say</h2><div class="g3">${TS.map(t=>`<div class="bx"><p>${t[1]}</p><b>${t[0]}</b></div>`).join("")}</div></div>
+<div class="sec cta"><div><h2>Want to sell or rent out your property?</h2><p>Tell us about it and our team will get in touch.</p></div><a class="b bg" href="#/sell">List Your Property</a></div></div>`}
+function list(rt,q){const pu=rt=="buy"?"sale":rt=="rent"?"rent":q.get("purpose")||"",g=k=>q.get(k)||"";
+L=P.filter(p=>(!pu||p.purpose==pu)&&(!g("type")||p.type==g("type"))&&(!g("city")||p.city==g("city"))&&p.beds>=+g("beds")&&p.baths>=+g("baths")&&p.price>=+g("min")&&(!g("max")||p.price<=+g("max")));
+const s=g("sort")||"new";L.sort((a,b)=>s=="lo"?a.price-b.price:s=="hi"?b.price-a.price:s=="feat"?b.feat-a.feat:b.date-a.date);
+const T={buy:["Find Your Next Property","Homes, plots and commercial properties for sale."],rent:["Properties for Rent","Monthly rentals — homes, shops and offices."],properties:["All Properties","Browse everything we currently have listed."]}[rt];
+return`<section class="wrap"><h1>${T[0]}</h1><p class="mu">${T[1]}</p><form class="fl">${rt=="properties"?`<select name="purpose" aria-label="Purpose"><option value="">Buy or Rent</option><option value="sale"${pu=="sale"?" selected":""}>Buy</option><option value="rent"${pu=="rent"?" selected":""}>Rent</option></select>`:""}${sel("type","Property type",TY,g("type"))}${sel("city","Location",cities,g("city"))}${beds(g("beds"))}<select name="baths" aria-label="Bathrooms"><option value="">Baths: Any</option>${[1,2,3,4].map(n=>`<option value="${n}"${g("baths")==n?" selected":""}>${n}+</option>`).join("")}</select><input name="min" type="number" min="0" placeholder="${pu=="rent"?"Min rent":"Min price"} (PKR)" value="${g("min")}" aria-label="Min price"><input name="max" type="number" min="0" placeholder="${pu=="rent"?"Max rent":"Max price"} (PKR)" value="${g("max")}" aria-label="Max price">
+<select name="sort" aria-label="Sort by">${[["new","Newest"],["lo","Price: Low to High"],["hi","Price: High to Low"],["feat","Featured"]].map(o=>`<option value="${o[0]}"${s==o[0]?" selected":""}>${o[1]}</option>`).join("")}</select><button type="button" class="b bo" data-a="clear">Clear Filters</button></form>
+<div class="bar"><span id="cnt"></span></div><div id="res"></div></section>`}
+function rr(){$("#cnt").textContent=`${L.length} ${L.length==1?"property":"properties"} found`;$("#res").innerHTML=grid(L.slice(0,shown))+(L.length>shown?`<p style="text-align:center"><button class="b bn" data-a="more">Load more (${L.length-shown})</button></p>`:"")}
+const galH=p=>`<div class="gm" data-a="lb"><img src="${p.imgs[gi]}" alt="${p.title} — photo ${gi+1}"><button class="nv pv" data-a="gn" data-d="-1" aria-label="Previous image">‹</button><button class="nv nx" data-a="gn" data-d="1" aria-label="Next image">›</button><span class="ct">${gi+1} / ${p.imgs.length}</span></div><div class="gt">${p.imgs.map((m,k)=>`<button class="${k==gi?"on":""}" data-a="gs" data-d="${k}" aria-label="Show photo ${k+1}"><img loading="lazy" src="${m}" alt=""></button>`).join("")}</div>`;
+const mapH=()=>C.mapUrl?`<iframe class="map" src="${C.mapUrl}" loading="lazy" title="Map"></iframe>`:`<div class="map">📍 Map placeholder — add your embed URL as mapUrl in the settings at the top of this file.</div>`;
+function detail(sl){const p=P.find(x=>x.slug==sl);if(!p)return nf();cur=p;const rent=p.purpose=="rent",m=`Hello, I am interested in Property ID ${p.id} - ${p.title}. Please share more details.`,sim=P.filter(x=>x.id!=p.id&&x.purpose==p.purpose&&(x.type==p.type||x.city==p.city)).slice(0,3);
+const sp=[["Bedrooms",p.beds||"—"],["Bathrooms",p.baths||"—"],["Area",p.area+" "+p.unit],["Parking",p.park||"—"],["Year built",p.year],["Floor",["Ground","1st","2nd","Basement"][p.i%4]],["Furnished",rent&&p.beds?"Furnished":"Unfurnished"],["Facing",["North","South","East","West"][p.i%4]],["Possession","Immediate"],["Electricity","Available"],["Gas","Available"],["Water","Available"],["Documents","Ask the office"]];
+const nb=[["🏫","School"],["🏥","Hospital"],["🕌","Mosque"],["🛒","Market"],["🛣️","Main road"],["🚌","Public transport"]];
+return`<section class="wrap"><p class="mu"><a href="#/">Home</a> › <a href="#/${rent?"rent":"buy"}">${rent?"Rent":"Buy"}</a> › ${p.title}</p>
+<div id="gal">${galH(p)}</div><div class="dl"><div><span class="tg ${p.purpose}" style="position:static;display:inline-block">${rent?"FOR RENT":"FOR SALE"}</span><h1>${p.title}</h1><p class="mu">📍 ${p.loc}, ${p.city} · Property ID ${p.id} · ${p.type} · Listed ${p.date.toLocaleDateString("en-GB")}</p><div class="pr" style="font-size:1.8rem">${fmt(p)}</div>
+<div class="row"><a class="b bg" href="${tel()}">📞 Call Now</a><a class="b bw" target="_blank" rel="noopener" href="${wa(m)}">WhatsApp</a><a class="b bn" href="#req" data-a="goto">Request Viewing</a><a class="b bo" data-a="goto" href="#req">Send Inquiry</a><a class="b bg" target="_blank" rel="noopener" href="${wa(`Hello, I would like to ${rent?"rent":"buy"} Property ID ${p.id} - ${p.title}.`)}">${rent?"Rent":"Buy"} This Property</a></div>
+<div class="row" style="margin-top:.6rem"><button class="b bo" data-a="fav" data-id="${p.id}">♥ ${favs.includes(p.id)?"Saved":"Save"}</button><button class="b bo" data-a="share">Share</button><button class="b bo" onclick="print()">Print</button></div>
+<div class="sec"><h2>Specifications</h2><div class="spc">${sp.map(s=>`<div><small>${s[0]}</small>${s[1]}</div>`).join("")}</div></div>
+<div class="sec"><h2>Description</h2><p>${p.desc}</p></div><div class="sec"><h2>Amenities</h2><div class="chips">${p.amen.map(a=>`<span>✓ ${a}</span>`).join("")}</div></div>
+<div class="sec"><h2>Nearby places</h2><div class="chips">${nb.map(n=>`<span>${n[0]} ${n[1]}</span>`).join("")}</div><p class="dm">Demo data — confirm distances before publishing.</p></div>
+<div class="sec"><h2>Location</h2>${mapH()}</div></div>
+<aside><div class="bx" style="position:sticky;top:5rem"><h2 id="req">Request a viewing</h2>${form("viewing",fld("name","Full name")+fld("phone","Phone number","tel")+fld("whatsapp","WhatsApp number","tel",0)+fld("email","Email","email",0)+fld("date","Preferred date","date")+fld("time","Preferred time","select",1,["Morning","Afternoon","Evening"])+fld("message","Message","textarea",0),"Request Viewing",`${p.id} - ${p.title}`)}<hr style="border:0;border-top:1px solid var(--bd);margin:1rem 0"><b>Listing agent</b><p class="mu" style="margin:.2rem 0">${C.name} — Property Consultant<br>${C.phone}</p></div></aside></div>
+<div class="sec"><h2>Similar properties</h2>${grid(sim)}</div></section>`}
+const sell=()=>`<section class="wrap"><h1>Want to Sell Your Property?</h1><p class="mu">List with ${C.name} and let our local team handle enquiries, viewings and follow-ups.</p><div class="g3" style="margin:1.5rem 0">${[["📣","Wider reach","Your listing is shown to buyers and renters browsing here."],["📞","One point of contact","We take the calls and arrange viewings."],["🧭","Honest guidance","We talk through pricing and paperwork with you."]].map(s=>`<div class="bx"><big>${s[0]}</big><h3>${s[1]}</h3><p class="mu">${s[2]}</p></div>`).join("")}</div>
+<div class="bx"><h2>List my property</h2>${form("sell",fld("name","Owner name")+fld("phone","Phone","tel")+fld("whatsapp","WhatsApp","tel",0)+fld("email","Email","email",0)+fld("ptype","Property type","select",1,TY)+fld("loc","Property location")+fld("area","Property area (e.g. 10 Marla)")+fld("price","Expected price (PKR)")+fld("purpose","Purpose","select",1,["Sell","Rent out"])+fld("desc","Property description","textarea",0)+fld("images","Upload property images","file",0)+`<p class="dm">Demo: images are not uploaded until a backend is connected.</p>`,"Submit Property")}</div></section>`;
+const contact=()=>`<section class="wrap"><h1>Contact Us</h1><div class="dl"><div class="bx"><h2>Send us a message</h2>${form("inquiry",fld("name","Name")+fld("phone","Phone","tel")+fld("email","Email","email")+fld("subject","Subject")+fld("message","Message","textarea"),"Send Message")}</div>
+<div><div class="bx"><h3>${C.name}</h3><p>📍 ${C.addr}<br>${C.town}</p><p>📞 <a href="${tel()}">${C.phone}</a><br>✉️ <a href="mailto:${C.email}">${C.email}</a></p><p>🕘 ${C.hours}</p><div class="row"><a class="b bg" href="${tel()}">Call Now</a><a class="b bw" target="_blank" rel="noopener" href="${wa()}">WhatsApp</a></div></div><div style="margin-top:1rem">${mapH()}</div></div></div></section>`;
+const about=()=>`<section class="wrap"><h1>About ${C.name}</h1>${[["Who we are","We are a local real-estate office helping people buy, rent and sell property in our area. (Edit this text with your own story.)"],["Our mission","To make finding and dealing in property simple, clear and stress-free."],["Our vision","To be the first office local families think of for property."],["Our local expertise","We know our neighbourhoods, prices and procedures, and share that openly."]].map(s=>`<div class="sec"><h2>${s[0]}</h2><p style="max-width:70ch">${s[1]}</p></div>`).join("")}
+<div class="sec"><h2>Why choose us</h2><div class="g3">${WHY.map(w=>`<div class="bx"><big>${w[0]}</big><h3>${w[1]}</h3><p class="mu">${w[2]}</p></div>`).join("")}</div></div><div class="sec"><div class="map" style="min-height:260px">🏢 Office / team photo — replace this block with your own image</div></div></section>`;
+const svs=()=>`<section class="wrap"><h1>Our Services</h1>${svc(SV)}</section>`;
+const favp=()=>{const a=P.filter(p=>favs.includes(p.id));return`<section class="wrap"><h1>Saved Properties</h1>${a.length?grid(a):`<div class="em"><h3>No favorites yet</h3><p class="mu">Tap the heart on any property to save it here.</p><a class="b bg" href="#/properties">Browse Properties</a></div>`}</section>`};
+const comp=()=>{const a=P.filter(p=>cmp.includes(p.id));if(a.length<2)return`<section class="wrap"><h1>Compare Properties</h1><div class="em"><h3>Select at least 2 properties</h3><p class="mu">Tick “Compare” on up to 3 property cards.</p><a class="b bg" href="#/properties">Browse Properties</a></div></section>`;
+const R=[["Price",p=>fmt(p)],["Location",p=>`${p.loc}, ${p.city}`],["Type",p=>p.type],["Area",p=>`${p.area} ${p.unit}`],["Bedrooms",p=>p.beds||"—"],["Bathrooms",p=>p.baths||"—"],["Parking",p=>p.park||"—"],["Amenities",p=>p.amen.join(", ")]];
+return`<section class="wrap"><h1>Compare Properties</h1><div class="ov"><table><tr><th></th>${a.map(p=>`<th><a href="#/properties/${p.slug}">${p.title}</a></th>`).join("")}</tr>${R.map(r=>`<tr><th>${r[0]}</th>${a.map(p=>`<td>${r[1](p)}</td>`).join("")}</tr>`).join("")}</table></div></section>`};
+const nf=()=>`<section class="wrap" style="text-align:center"><h1>Property Not Found</h1><p class="mu">The page you are looking for doesn't exist or the property is no longer listed.</p><div class="row" style="justify-content:center"><a class="b bg" href="#/properties">Browse Properties</a><a class="b bn" href="#/">Go Home</a><a class="b bo" href="#/contact">Contact Us</a></div></section>`;
+/* router */
+function r(){const[path,qs]=(location.hash.slice(1)||"/").split("?"),q=new URLSearchParams(qs||""),s=path.split("/").filter(Boolean),k=s[0]||"";let h;shown=6;if(path!=lastP)gi=0;
+h=!k?home():k=="properties"&&s[1]?detail(s[1]):["properties","buy","rent"].includes(k)?list(k,q):({sell,contact,about,services:svs,favorites:favp,compare:comp}[k]||nf)();
+const y=scrollY;$("#app").innerHTML=h;if($("#res"))rr();scrollTo(0,path!=lastP?0:y);lastP=path;
+document.querySelectorAll("#nav a.l").forEach(a=>a.classList.toggle("act",a.getAttribute("href")=="#"+(k=="services"?"/about":"/"+k)));$("#nav").classList.remove("open");
+document.title=(($("#app h1")||{}).textContent||"")+" | "+C.name;
+const d=document.querySelector('meta[name=description]');d.content=cur&&s[1]?cur.short:"Buy, rent, or sell with a trusted local real-estate team.";
+let ld=$("#ld");if(ld)ld.remove();if(s[1]&&cur&&k=="properties"){ld=document.createElement("script");ld.id="ld";ld.type="application/ld+json";ld.textContent=JSON.stringify({"@context":"https://schema.org","@type":"RealEstateListing",name:cur.title,description:cur.short,url:location.href,offers:{"@type":"Offer",price:cur.price,priceCurrency:"PKR"}});document.head.append(ld)}
+upd()}
+function upd(){const c=$("#cb");c.style.display=cmp.length?"inline-flex":"none";c.textContent=`⚖ Compare (${cmp.length})`}
+function upG(){$("#gal").innerHTML=galH(cur);$("#lbi").src=cur.imgs[gi];$("#lbc").textContent=`${gi+1} / ${cur.imgs.length}`}
+addEventListener("hashchange",r);
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a,id=b.dataset.id;
+if(a=="fav"){e.preventDefault();favs=favs.includes(id)?favs.filter(x=>x!=id):[...favs,id];sv();if(/favorites|properties\/./.test(location.hash))r();else b.classList.toggle("on")}
+else if(a=="cmp"){if(b.checked&&cmp.length>=3){b.checked=false;return toast("You can compare up to 3 properties.")}cmp=b.checked?[...cmp,id]:cmp.filter(x=>x!=id);upd()}
+else if(a=="more"){shown+=6;rr()}
+else if(a=="clear")location.hash=location.hash.split("?")[0];
+else if(a=="gn"){e.stopPropagation();gi=(gi+ +b.dataset.d+cur.imgs.length)%cur.imgs.length;upG()}
+else if(a=="gs"){gi=+b.dataset.d;upG()}
+else if(a=="lb"){$("#lb").classList.add("on");upG()}else if(a=="lbx")$("#lb").classList.remove("on");
+else if(a=="goto"){e.preventDefault();$("#req").scrollIntoView({behavior:"smooth"})}
+else if(a=="share"){const u=location.href;navigator.share?navigator.share({title:cur.title,url:u}).catch(()=>{}):(navigator.clipboard&&navigator.clipboard.writeText(u),toast("Link copied"))}
+else if(a=="mm")$("#nav").classList.toggle("open")});
+document.addEventListener("keydown",e=>{if(!$("#lb").classList.contains("on"))return;if(e.key=="Escape")$("#lb").classList.remove("on");if(e.key=="ArrowRight"||e.key=="ArrowLeft"){gi=(gi+(e.key=="ArrowRight"?1:-1)+cur.imgs.length)%cur.imgs.length;upG()}});
+document.addEventListener("change",e=>{const f=e.target.closest("form.fl");if(!f)return;const q=new URLSearchParams();new FormData(f).forEach((v,k)=>{if(v)q.set(k,v)});location.hash=location.hash.split("?")[0]+"?"+q});
+document.addEventListener("submit",async e=>{const f=e.target;if(f.classList.contains("sf")){e.preventDefault();const d=new FormData(f),q=new URLSearchParams();["type","city","beds","min","max"].forEach(k=>d.get(k)&&q.set(k,d.get(k)));location.hash=(d.get("purpose")=="rent"?"#/rent":"#/buy")+"?"+q;return}
+if(f.classList.contains("fl")){e.preventDefault();return}if(!f.classList.contains("fm"))return;e.preventDefault();let ok=1;
+f.querySelectorAll(".fd").forEach(w=>{const i=w.querySelector("input,select,textarea"),v=i.value.trim();let m="";
+if(i.hasAttribute("data-req")&&!v)m="This field is required.";else if(v&&i.type=="email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))m="Enter a valid email address.";else if(v&&i.type=="tel"&&!/^\+?[\d\s-]{7,15}$/.test(v))m="Enter a valid phone number, e.g. +92 300 1234567.";
+w.querySelector(".er").textContent=m;i.setAttribute("aria-invalid",!!m);if(m)ok=0});
+const ms=f.querySelector(".ms"),btn=f.querySelector("button[type=submit]");if(!ok){ms.className="ms bad";ms.textContent="Please fix the highlighted fields.";return}
+btn.disabled=true;btn.textContent="Sending…";
+try{await send(f.dataset.k,{...Object.fromEntries([...new FormData(f)].filter(x=>typeof x[1]=="string")),property:f.dataset.ctx});ms.className="ms ok";ms.textContent=MSG[f.dataset.k];f.reset()}catch(x){ms.className="ms bad";ms.textContent="Network error. Please try again, or contact us on WhatsApp."}
+btn.disabled=false;btn.textContent=btn.dataset.t});
+/* chrome */
+$("#hd").innerHTML=`<a class="lg" href="#/">${C.logo?`<img src="${C.logo}" alt="${C.name}">`:`<i>${C.name[0]}</i>`}${C.name}</a><button class="mb" data-a="mm" aria-label="Menu">☰</button><nav id="nav" aria-label="Main">${NAV.map(n=>`<a class="l" href="#${n[1]}">${n[0]}</a>`).join("")}<a class="l" href="#/favorites">♥ Saved</a><a class="b bw" target="_blank" rel="noopener" href="${wa()}">WhatsApp</a><a class="b bg" href="#/sell">List Property</a></nav>`;
+$("#ft").innerHTML=`<div class="g3"><div><h3>${C.name}</h3><p>${C.tagline}</p><div class="row">${Object.entries(C.social).map(([k,v])=>`<a href="${v}" target="_blank" rel="noopener" style="display:inline">${k}</a>`).join("")}</div></div><div><h3>Properties</h3><a href="#/buy">Buy</a><a href="#/rent">Rent</a><a href="#/properties">All listings</a><a href="#/favorites">Saved</a></div><div><h3>Services</h3>${SV.slice(0,4).map(s=>`<a href="#/services">${s[1]}</a>`).join("")}</div><div><h3>Quick links</h3><a href="#/about">About Us</a><a href="#/sell">Sell Your Property</a><a href="#/contact">Contact</a></div><div><h3>Contact</h3><a href="${tel()}">${C.phone}</a><a href="${wa()}" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:${C.email}">${C.email}</a><span>${C.addr}<br>${C.hours}</span></div></div><div class="cp">© 2026 ${C.name}. All rights reserved.</div>`;
+$("#fw").innerHTML=`<a href="${tel()}" style="background:var(--navy)" aria-label="Call">📞</a><a href="${wa()}" target="_blank" rel="noopener" style="background:#1f8a4c" aria-label="WhatsApp">💬</a>`;
+r();
+</script></body></html>
